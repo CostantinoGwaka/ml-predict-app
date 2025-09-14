@@ -1,15 +1,14 @@
 {
   "roots": [
-    "basic_example"
+    "flutter_application_1"
   ],
   "packages": [
     {
-      "name": "basic_example",
+      "name": "flutter_application_1",
       "version": "1.0.0+1",
       "dependencies": [
         "cupertino_icons",
-        "flutter",
-        "tflite_flutter"
+        "flutter"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -18,7 +17,7 @@
     },
     {
       "name": "flutter_lints",
-      "version": "2.0.3",
+      "version": "5.0.0",
       "dependencies": [
         "lints"
       ]
@@ -52,19 +51,8 @@
       ]
     },
     {
-      "name": "tflite_flutter",
-      "version": "0.10.3",
-      "dependencies": [
-        "ffi",
-        "flutter",
-        "path",
-        "plugin_platform_interface",
-        "quiver"
-      ]
-    },
-    {
       "name": "cupertino_icons",
-      "version": "1.0.6",
+      "version": "1.0.8",
       "dependencies": []
     },
     {
@@ -81,7 +69,7 @@
     },
     {
       "name": "lints",
-      "version": "2.1.1",
+      "version": "5.1.1",
       "dependencies": []
     },
     {
@@ -240,25 +228,6 @@
         "stream_channel",
         "string_scanner",
         "term_glyph"
-      ]
-    },
-    {
-      "name": "ffi",
-      "version": "2.1.0",
-      "dependencies": []
-    },
-    {
-      "name": "quiver",
-      "version": "3.2.1",
-      "dependencies": [
-        "matcher"
-      ]
-    },
-    {
-      "name": "plugin_platform_interface",
-      "version": "2.1.6",
-      "dependencies": [
-        "meta"
       ]
     },
     {
