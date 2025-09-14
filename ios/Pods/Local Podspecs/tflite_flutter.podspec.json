@@ -14,9 +14,7 @@
     "path": "."
   },
   "dependencies": {
-    "Flutter": [
-
-    ],
+    "Flutter": [],
     "TensorFlowLiteSwift": [
       "2.12.0"
     ],

@@ -56,7 +56,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   late Interpreter interpreter;
   var result = "results to be shown here...";
   @override
@@ -67,16 +66,16 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   loadModel() async {
-    interpreter = await Interpreter.fromAsset('assets/linear.tflite');
+    interpreter = await Interpreter.fromAsset('assets/ml1ModelPredict.tflite');
   }
 
-  performAction(){
+  performAction() {
     int value = int.parse(textEditingController.text);
     // For ex: if input tensor shape [1,1] and type is float32
     var input = [value];
 
     // if output tensor shape [1,1] and type is float32
-    var output = List.filled(1, 0).reshape([1,1]);
+    var output = List.filled(1, 0).reshape([1, 1]);
 
     // inference
     interpreter.run(input, output);
@@ -88,11 +87,9 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-
   TextEditingController textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
@@ -107,24 +104,27 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Container(
-          margin: EdgeInsets.only(left: 40,right: 40),
+          margin: const EdgeInsets.only(left: 40, right: 40),
           child: Column(
-
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              TextField(controller: textEditingController,decoration: InputDecoration(hintText: "Type Number"),),
-              ElevatedButton(onPressed: (){
-                 performAction();
-              }, child: Text('Get')),
+              TextField(
+                controller: textEditingController,
+                decoration: const InputDecoration(hintText: "Type Number"),
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    performAction();
+                  },
+                  child: const Text('Get')),
               Text(
-                '$result',
+                result,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
             ],
           ),
         ),
       ),
-
     );
   }
 }

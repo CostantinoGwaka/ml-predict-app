@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/user/Documents/sdk/flutter"
-export "FLUTTER_APPLICATION_PATH=/Users/user/Desktop/Elearning/FlutterRegression/basic_example"
+export "FLUTTER_ROOT=/Users/costantinogwaka/development/flutter"
+export "FLUTTER_APPLICATION_PATH=/Applications/MAMP/htdocs/ml-predict-app"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
